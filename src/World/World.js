@@ -23,8 +23,13 @@ class World {
     loop = new Loop(camera, scene, renderer);
     container.append(renderer.domElement);
     controls = createControls(camera, renderer.domElement);
+    
+    renderer.setPixelRatio(window.devicePixelRatio)
+    renderer.setSize(window.innerWidth/2, window.innerHeight/3);
 
-    renderer.setSize(window.innerWidth, window.innerHeight/3);
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
 
     const { ambientLight, mainLight } = createLights();
 

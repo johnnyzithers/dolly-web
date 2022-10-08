@@ -1,8 +1,8 @@
 const setSize = (container, camera, renderer) => {
-  camera.aspect = container.clientWidth / container.clientHeight;
+  camera.aspect = container.clientHeight / container.clientHeight;
   camera.updateProjectionMatrix();
 
-  renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.setSize(container.clientHeight, container.clientHeight);
   renderer.setPixelRatio(window.devicePixelRatio);
 };
 
