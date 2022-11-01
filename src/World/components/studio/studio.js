@@ -5,7 +5,7 @@ import { studioModel } from './studioModel.js';
 async function loadStudio() {
   const loader = new GLTFLoader();
 
-  const studioData = await loader.loadAsync('/assets/models/mix-room2.glb');
+  const studioData = await loader.loadAsync('/assets/models/mix-room.glb');
 
   console.log('STUDIO!!', studioData);
 
